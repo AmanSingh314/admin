@@ -88,10 +88,10 @@ const YouTubeLinksManager = ({ usercode }) => {
     try {
       dispatch(setLoading(true));
       
-      // Prepare the data with all required fields
+     
       const linksToSend = links.map(link => ({
         ...link,
-        id: link.id || 0, // Ensure ID exists (0 for new items)
+        id: link.id || 0, 
         url: link.url.startsWith('http') ? link.url : `https://${link.url}`,
         title: link.title || 'Untitled Video',
         content: link.content || '',
